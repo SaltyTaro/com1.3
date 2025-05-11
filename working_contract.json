@@ -1,0 +1,36 @@
+{
+  "contract": {
+    "name": "GOLD03OCT25FUT",
+    "exchange": "MCX",
+    "token": "440939",
+    "expiry": "",
+    "strike": "",
+    "lotsize": "",
+    "instrument_type": ""
+  },
+  "params": {
+    "exchange": "MCX",
+    "symboltoken": "440939",
+    "interval": "ONE_DAY",
+    "fromdate": "2025-04-24 15:04",
+    "todate": "2025-05-01 15:04"
+  },
+  "sample_data": [
+    [
+      "2025-04-25T00:00:00+05:30",
+      97421.0,
+      97449.0,
+      95944.0,
+      96276.0,
+      34
+    ],
+    [
+      "2025-04-28T00:00:00+05:30",
+      96357.0,
+      97565.0,
+      95679.0,
+      97368.0,
+      36
+    ]
+  ]
+}

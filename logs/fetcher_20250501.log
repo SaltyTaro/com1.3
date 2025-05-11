@@ -1,0 +1,525 @@
+2025-05-01 14:17:19,464 - __main__ - INFO - Setting up ClickHouse database and tables
+2025-05-01 14:17:19,579 - src.db.clickhouse_client - ERROR - Failed to connect to ClickHouse: Code: 516.
+DB::Exception: default: Authentication failed: password is incorrect, or there is no user with such name.
+
+If you use ClickHouse Cloud, the password can be reset at https://clickhouse.cloud/
+on the settings page for the corresponding service.
+
+If you have installed ClickHouse and forgot password you can reset it in the configuration file.
+The password for default user is typically located at /etc/clickhouse-server/users.d/default-password.xml
+and deleting this file will reset the password.
+See also /etc/clickhouse-server/users.xml on the server where ClickHouse is installed.
+
+. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::AccessControl::authenticate(DB::Credentials const&, Poco::Net::IPAddress const&, DB::ClientInfo const&) const @ 0x00000000122cc9e3
+3. DB::Session::authenticate(DB::Credentials const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001366e502
+4. DB::Session::authenticate(String const&, String const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001366db72
+5. DB::TCPHandler::receiveHello() @ 0x0000000014c37e08
+6. DB::TCPHandler::runImpl() @ 0x0000000014c2b17e
+7. DB::TCPHandler::run() @ 0x0000000014c4bb19
+8. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+9. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+10. Poco::PooledThread::run() @ 0x0000000018342cfb
+11. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+12. ? @ 0x00007db55689caa4
+13. ? @ 0x00007db556929c3c
+
+2025-05-01 14:17:19,579 - __main__ - ERROR - Failed to connect to ClickHouse server. Please check settings.
+2025-05-01 14:19:02,058 - __main__ - INFO - Setting up ClickHouse database and tables
+2025-05-01 14:19:02,088 - src.db.clickhouse_client - ERROR - Failed to connect to ClickHouse: Code: 516.
+DB::Exception: default: Authentication failed: password is incorrect, or there is no user with such name.
+
+If you use ClickHouse Cloud, the password can be reset at https://clickhouse.cloud/
+on the settings page for the corresponding service.
+
+If you have installed ClickHouse and forgot password you can reset it in the configuration file.
+The password for default user is typically located at /etc/clickhouse-server/users.d/default-password.xml
+and deleting this file will reset the password.
+See also /etc/clickhouse-server/users.xml on the server where ClickHouse is installed.
+
+. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::AccessControl::authenticate(DB::Credentials const&, Poco::Net::IPAddress const&, DB::ClientInfo const&) const @ 0x00000000122cc9e3
+3. DB::Session::authenticate(DB::Credentials const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001366e502
+4. DB::Session::authenticate(String const&, String const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001366db72
+5. DB::TCPHandler::receiveHello() @ 0x0000000014c37e08
+6. DB::TCPHandler::runImpl() @ 0x0000000014c2b17e
+7. DB::TCPHandler::run() @ 0x0000000014c4bb19
+8. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+9. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+10. Poco::PooledThread::run() @ 0x0000000018342cfb
+11. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+12. ? @ 0x00007db55689caa4
+13. ? @ 0x00007db556929c3c
+
+2025-05-01 14:19:02,088 - __main__ - ERROR - Failed to connect to ClickHouse server. Please check settings.
+2025-05-01 14:20:09,009 - __main__ - INFO - Setting up ClickHouse database and tables
+2025-05-01 14:20:09,073 - src.db.clickhouse_client - ERROR - Failed to connect to ClickHouse: Code: 81.
+DB::Exception: Database market_data does not exist. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String>(int, FormatStringHelperImpl<std::type_identity<String>::type>, String&&) @ 0x0000000009f64f2b
+3. DB::DatabaseCatalog::assertDatabaseExists(String const&) const @ 0x0000000013142349
+4. DB::TCPHandler::runImpl() @ 0x0000000014c2b1c3
+5. DB::TCPHandler::run() @ 0x0000000014c4bb19
+6. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+7. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+8. Poco::PooledThread::run() @ 0x0000000018342cfb
+9. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+10. ? @ 0x00007db55689caa4
+11. ? @ 0x00007db556929c3c
+
+2025-05-01 14:20:09,074 - __main__ - ERROR - Failed to connect to ClickHouse server. Please check settings.
+2025-05-01 14:20:54,387 - __main__ - INFO - Setting up ClickHouse database and tables
+2025-05-01 14:20:54,390 - src.db.clickhouse_client - ERROR - Failed to connect to ClickHouse: Code: 81.
+DB::Exception: Database market_data does not exist. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String>(int, FormatStringHelperImpl<std::type_identity<String>::type>, String&&) @ 0x0000000009f64f2b
+3. DB::DatabaseCatalog::assertDatabaseExists(String const&) const @ 0x0000000013142349
+4. DB::TCPHandler::runImpl() @ 0x0000000014c2b1c3
+5. DB::TCPHandler::run() @ 0x0000000014c4bb19
+6. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+7. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+8. Poco::PooledThread::run() @ 0x0000000018342cfb
+9. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+10. ? @ 0x0000787ae409caa4
+11. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:20:54,390 - __main__ - ERROR - Failed to connect to ClickHouse server. Please check settings.
+2025-05-01 14:21:29,536 - __main__ - INFO - Setting up ClickHouse database and tables
+2025-05-01 14:21:29,539 - src.db.clickhouse_client - ERROR - Failed to connect to ClickHouse: Code: 81.
+DB::Exception: Database market_data does not exist. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String>(int, FormatStringHelperImpl<std::type_identity<String>::type>, String&&) @ 0x0000000009f64f2b
+3. DB::DatabaseCatalog::assertDatabaseExists(String const&) const @ 0x0000000013142349
+4. DB::TCPHandler::runImpl() @ 0x0000000014c2b1c3
+5. DB::TCPHandler::run() @ 0x0000000014c4bb19
+6. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+7. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+8. Poco::PooledThread::run() @ 0x0000000018342cfb
+9. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+10. ? @ 0x0000787ae409caa4
+11. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:21:29,539 - __main__ - ERROR - Failed to connect to ClickHouse server. Please check settings.
+2025-05-01 14:24:18,095 - __main__ - INFO - Setting up ClickHouse database and tables
+2025-05-01 14:24:18,106 - __main__ - INFO - Creating database if it doesn't exist
+2025-05-01 14:24:18,163 - src.db.clickhouse_client - INFO - Database 'market_data' created or already exists
+2025-05-01 14:24:18,285 - src.db.clickhouse_client - INFO - Table 'commodity_market_data' created or already exists
+2025-05-01 14:24:18,419 - src.db.clickhouse_client - INFO - Table 'commodity_daily_summary' created or already exists
+2025-05-01 14:24:18,419 - __main__ - INFO - Database and tables created successfully
+2025-05-01 14:24:52,198 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'MCX_FO') AND (symbol_token = '234230') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,203 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'MCX_FO') AND (symbol_token = '234235') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,206 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'MCX_FO') AND (symbol_token = '234219') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,208 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'MCX_FO') AND (symbol_token = '234226') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,210 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'MCX_FO') AND (symbol_token = '234272') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,212 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'MCX_FO') AND (symbol_token = '234243') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,214 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'MCX_FO') AND (symbol_token = '234247') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,218 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'MCX_FO') AND (symbol_token = '234217') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,220 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'MCX_FO') AND (symbol_token = '234248') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,222 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'NCX_FO') AND (symbol_token = '252346') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,224 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'NCX_FO') AND (symbol_token = '252364') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,225 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'NCX_FO') AND (symbol_token = '252409') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:24:52,226 - src.db.clickhouse_client - ERROR - Failed to get data coverage: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT min(timestamp) AS first_date, max(timestamp) AS last_date, count(*) AS total_records FROM commodity_market_data WHERE (exchange = 'NCX_FO') AND (symbol_token = '252369') AND (interval = 'ONE_DAY'). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:25:22,245 - src.api.smart_api_client - INFO - Authentication successful
+2025-05-01 14:25:22,246 - __main__ - INFO - Fetching data for 13 commodities from 2020-04-02 00:00:00+05:30 to 2025-05-01 00:00:00+05:30 with interval 1day
+2025-05-01 14:25:22,246 - __main__ - INFO - Processing GOLD (MCX_FO:234230)
+2025-05-01 14:25:22,246 - __main__ - INFO - Fetching data for GOLD (MCX_FO:234230) from 2020-04-02 00:00:00+05:30 to 2025-05-01 00:00:00+05:30 with interval ONE_DAY
+2025-05-01 14:25:22,251 - src.db.clickhouse_client - ERROR - Failed to check data existence: Code: 60.
+DB::Exception: Unknown table expression identifier 'commodity_market_data' in scope SELECT COUNT(*) FROM commodity_market_data WHERE (exchange = 'MCX_FO') AND (symbol_token = '234230') AND (interval = 'ONE_DAY') AND (timestamp >= toDateTime('2020-04-02')) AND (timestamp <= toDateTime('2025-05-01')). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000f48dcdb
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x0000000009f6520c
+2. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000a5c7c2b
+3. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x0000000012c6918b
+4. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x0000000012c63c4c
+5. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x0000000012c634b3
+6. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>) @ 0x0000000012cb8256
+7. DB::buildQueryTreeAndRunPasses(std::shared_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) (.llvm.7850860643604347083) @ 0x0000000013559465
+8. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(std::shared_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001355769c
+9. std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> std::__function::__policy_invoker<std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::registerInterpreterSelectQueryAnalyzer(DB::InterpreterFactory&)::$_0, std::unique_ptr<DB::IInterpreter, std::default_delete<DB::IInterpreter>> (DB::InterpreterFactory::Arguments const&)>>(std::__function::__policy_storage const*, DB::InterpreterFactory::Arguments const&) (.llvm.7850860643604347083) @ 0x000000001355ad02
+10. DB::InterpreterFactory::get(std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::Context>, DB::SelectQueryOptions const&) @ 0x000000001350288b
+11. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, DB::ReadBuffer*, std::shared_ptr<DB::IAST>&) @ 0x0000000013901bca
+12. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x00000000138fd3a4
+13. DB::TCPHandler::runImpl() @ 0x0000000014c2d92c
+14. DB::TCPHandler::run() @ 0x0000000014c4bb19
+15. Poco::Net::TCPServerConnection::start() @ 0x0000000018376567
+16. Poco::Net::TCPServerDispatcher::run() @ 0x00000000183769b9
+17. Poco::PooledThread::run() @ 0x0000000018342cfb
+18. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000183411dd
+19. ? @ 0x0000787ae409caa4
+20. ? @ 0x0000787ae4129c3c
+
+2025-05-01 14:25:22,252 - src.api.smart_api_client - INFO - Fetching data for MCX_FO:234230 from 2020-04-02 00:00:00+05:30 to 2020-07-11 00:00:00+05:30
+2025-05-01 14:25:22,360 - src.api.smart_api_client - ERROR - Error in API request (attempt 1/5): Couldn't parse the JSON response received from the server: b''
+2025-05-01 14:26:22,573 - src.api.smart_api_client - ERROR - Error in API request (attempt 2/5): Couldn't parse the JSON response received from the server: b''
+2025-05-01 14:27:22,909 - src.api.smart_api_client - ERROR - Error in API request (attempt 3/5): Couldn't parse the JSON response received from the server: b''
+2025-05-01 14:31:01,117 - __main__ - INFO - Setting up ClickHouse database and tables
+2025-05-01 14:31:01,127 - __main__ - INFO - Creating database if it doesn't exist
+2025-05-01 14:31:01,128 - src.db.clickhouse_client - INFO - Database 'market_data' created or already exists
+2025-05-01 14:31:01,129 - src.db.clickhouse_client - INFO - Table 'commodity_market_data' created or already exists
+2025-05-01 14:31:01,131 - src.db.clickhouse_client - INFO - Table 'commodity_daily_summary' created or already exists
+2025-05-01 14:31:01,131 - __main__ - INFO - Database and tables created successfully
+2025-05-01 14:31:09,135 - __main__ - INFO - Ensuring database and tables exist...
+2025-05-01 14:31:09,138 - src.db.clickhouse_client - INFO - Database 'market_data' created or already exists
+2025-05-01 14:31:09,140 - src.db.clickhouse_client - INFO - Table 'commodity_market_data' created or already exists
+2025-05-01 14:31:09,142 - src.db.clickhouse_client - INFO - Table 'commodity_daily_summary' created or already exists
+2025-05-01 14:31:09,793 - src.api.smart_api_client - INFO - Authentication successful
+2025-05-01 14:31:09,795 - __main__ - INFO - Fetching data for 1 commodities from 2023-01-01 09:00:00+05:30 to 2023-01-31 23:59:00+05:30 with interval 1day
+2025-05-01 14:31:09,795 - __main__ - INFO - Processing GOLD (MCX_FO:234230)
+2025-05-01 14:31:09,796 - __main__ - INFO - Fetching data for GOLD (MCX_FO:234230) from 2023-01-01 09:00:00+05:30 to 2023-01-31 23:59:00+05:30 with interval ONE_DAY
+2025-05-01 14:31:09,814 - src.api.smart_api_client - INFO - Fetching data for MCX_FO:234230 from 2023-01-01 09:00:00+05:30 to 2023-01-31 23:59:00+05:30
+2025-05-01 14:31:09,815 - src.api.smart_api_client - INFO - Making API request with params: {'exchange': 'MCX_FO', 'symboltoken': '234230', 'interval': 'ONE_DAY', 'fromdate': '2023-01-01 09:00', 'todate': '2023-01-31 23:59'}
+2025-05-01 14:31:09,989 - src.api.smart_api_client - ERROR - Error in API request (attempt 1/5): Couldn't parse the JSON response received from the server: b''
+2025-05-01 14:32:09,990 - src.api.smart_api_client - INFO - Making API request with params: {'exchange': 'MCX_FO', 'symboltoken': '234230', 'interval': 'ONE_DAY', 'fromdate': '2023-01-01 09:00', 'todate': '2023-01-31 23:59'}
+2025-05-01 14:32:10,126 - src.api.smart_api_client - ERROR - Error in API request (attempt 2/5): Couldn't parse the JSON response received from the server: b''
+2025-05-01 15:04:15,677 - __main__ - INFO - Ensuring database and tables exist...
+2025-05-01 15:04:15,680 - src.db.clickhouse_client - INFO - Database 'market_data' created or already exists
+2025-05-01 15:04:15,682 - src.db.clickhouse_client - INFO - Table 'commodity_market_data' created or already exists
+2025-05-01 15:04:15,685 - src.db.clickhouse_client - INFO - Table 'commodity_daily_summary' created or already exists
+2025-05-01 15:04:16,511 - src.api.smart_api_client - INFO - Authentication successful
+2025-05-01 15:04:16,511 - __main__ - INFO - Fetching data for 1 commodities from 2025-04-24 00:00:00+05:30 to 2025-05-01 00:00:00+05:30 with interval 1day
+2025-05-01 15:04:16,512 - __main__ - INFO - Processing GOLD03OCT25FUT (MCX:440939)
+2025-05-01 15:04:16,512 - __main__ - INFO - Fetching data for GOLD03OCT25FUT (MCX:440939) from 2025-04-24 00:00:00+05:30 to 2025-05-01 00:00:00+05:30 with interval ONE_DAY
+2025-05-01 15:04:16,566 - src.api.smart_api_client - INFO - Fetching data for MCX:440939 from 2025-04-24 00:00:00+05:30 to 2025-05-01 00:00:00+05:30
+2025-05-01 15:04:16,566 - src.api.smart_api_client - INFO - Making API request with params: {'exchange': 'MCX', 'symboltoken': '440939', 'interval': 'ONE_DAY', 'fromdate': '2025-04-24 00:00', 'todate': '2025-05-01 00:00'}
+2025-05-01 15:04:16,567 - src.api.smart_api_client - INFO - Making direct API request to: https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData
+2025-05-01 15:04:16,567 - src.api.smart_api_client - INFO - Using headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': '8c:ec:4b:7c:94:f0', 'Accept': 'application/json', 'X-PrivateKey': 'yX3K3lzs', 'X-UserType': 'USER', 'X-SourceID': 'WEB', 'Authorization': 'Bearer Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkFBQUQxNzUxNTYiLCJyb2xlcyI6MCwidXNlcnR5cGUiOiJVU0VSIiwidG9rZW4iOiJleUpoYkdjaU9pSlNVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKMWMyVnlYM1I1Y0dVaU9pSmpiR2xsYm5RaUxDSjBiMnRsYmw5MGVYQmxJam9pZEhKaFpHVmZZV05qWlhOelgzUnZhMlZ1SWl3aVoyMWZhV1FpT2pnc0luTnZkWEpqWlNJNklqTWlMQ0prWlhacFkyVmZhV1FpT2lJeU9EaG1ObVExT1MwNE5XVmhMVE01TVdJdFltSmtNeTB6T0dOalpEYzJZelV3TkRnaUxDSnJhV1FpT2lKMGNtRmtaVjlyWlhsZmRqSWlMQ0p2Ylc1bGJXRnVZV2RsY21sa0lqbzRMQ0p3Y205a2RXTjBjeUk2ZXlKa1pXMWhkQ0k2ZXlKemRHRjBkWE1pT2lKaFkzUnBkbVVpZlN3aWJXWWlPbnNpYzNSaGRIVnpJam9pWVdOMGFYWmxJbjE5TENKcGMzTWlPaUowY21Ga1pWOXNiMmRwYmw5elpYSjJhV05sSWl3aWMzVmlJam9pUVVGQlJERTNOVEUxTmlJc0ltVjRjQ0k2TVRjME5qRTNPRFExTml3aWJtSm1Jam94TnpRMk1Ea3hPRGMyTENKcFlYUWlPakUzTkRZd09URTROellzSW1wMGFTSTZJbVUwWkRKak1ERmxMV1ZoT0RZdE5ERmhOaTFoTjJRNUxXRmpORGRrT0RRNE4ySmhaQ0lzSWxSdmEyVnVJam9pSW4wLlVZMG9OYmwtZXJScFN0X3dpdmVraEFPb2JqYVFHMnJqQS04dEc2VXZRNWJqTjl4bTNIMHQtSmM1ZVJTa2tOOElTVGkzN0VPaVlEVUVaUkFxcE9ERlQzUDQyY2YtZFpvazRqT25wU1hzaG9nNk9qVjJxWTVTVzBaMmNOWTUzSkRqdlV1ZlBTX3NCUmlkWkoxUUluRmxBLTVaVk5ucEF0ZUJkTWFhcU9weUlQNCIsIkFQSS1LRVkiOiJ5WDNLM2x6cyIsImlhdCI6MTc0NjA5MjA1NiwiZXhwIjoxNzQ2MTc4NDU2fQ.D6YzP2lbgPeg4xeiO8Ugm1xyZyg7FDN6I_p5M64TSMhDZqSKgHvxP_HiufuOusobUGLwVD6uVCHFXmft4Q925w'}
+2025-05-01 15:04:16,725 - src.api.smart_api_client - INFO - Raw API response status: 200
+2025-05-01 15:04:16,725 - src.api.smart_api_client - INFO - Raw API response text: {"success":false,"message":"Invalid Token","errorCode":"AG8001","data":""}
+2025-05-01 15:04:16,887 - src.api.smart_api_client - INFO - Received 5 data points for MCX:440939
+2025-05-01 15:04:16,887 - src.api.smart_api_client - INFO - First data point: ['2025-04-24T00:00:00+05:30', 97380.0, 97500.0, 96905.0, 97143.0, 28]
+2025-05-01 15:04:16,887 - src.api.smart_api_client - INFO - Last data point: ['2025-04-30T00:00:00+05:30', 96696.0, 96696.0, 95179.0, 96043.0, 85]
+2025-05-01 15:04:16,903 - src.api.smart_api_client - INFO - Successfully processed 5 records
+2025-05-01 15:04:16,904 - __main__ - INFO - Received data chunk with 5 records for GOLD03OCT25FUT
+2025-05-01 15:04:16,907 - __main__ - INFO - Date range: 2025-04-24 00:00:00+05:30 to 2025-04-30 00:00:00+05:30
+2025-05-01 15:04:16,916 - src.db.clickhouse_client - ERROR - Failed to insert data: NumPy inserts is only allowed with columnar=True
+2025-05-01 15:04:16,916 - __main__ - ERROR - Failed to store data for GOLD03OCT25FUT
+2025-05-01 15:04:17,917 - __main__ - WARNING - No data found for GOLD03OCT25FUT in the specified date range
+2025-05-01 15:04:18,244 - src.api.smart_api_client - INFO - Logged out successfully
+2025-05-01 15:04:18,244 - __main__ - INFO - Completed fetching data for 1 commodities
+2025-05-01 15:04:18,244 - __main__ - INFO - Total chunks processed: 0
+2025-05-01 15:04:18,245 - __main__ - INFO - Total records fetched: 0
+2025-05-01 15:04:18,245 - __main__ - INFO - Total time elapsed: 1.73 seconds
